@@ -115,6 +115,9 @@
                 document.getElementById('city-name').innerText = `${data.location.name}`;
                 document.getElementById('humidity').innerText = `${humidity}% Humidity`;
                 document.getElementById('wind-speed').innerText = `${windSpeed} km/h WIND SPEED`;
+                const response = await fetch(URL);
+                const data = await response.json();
+                console.log(data); // Debugging
 
                 // Set weather image based on temperature
                 const weatherIcon = document.getElementById('weather-icon');
